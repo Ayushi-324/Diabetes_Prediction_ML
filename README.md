@@ -14,6 +14,10 @@ This project uses the **Pima Indians Diabetes Database** to build a predictive m
 * **Model:** Gaussian Naive Bayes (Optimized with `var_smoothing=0.001`)
 
 ## 🛠️ Technical Workflow
+<p align="center">
+  <img src="pipeline_architecture.png" alt="Model Pipeline" width="600">
+</p>
+
 1. **Data Cleaning:** Handled missing values (zeros in Glucose, BMI, etc.) using `SimpleImputer` with a median strategy.
 2. **Pipeline Architecture:** Built a `scikit-learn` Pipeline to bundle Imputation, Scaling, and the Model to prevent **Data Leakage**.
 3. **Model Interpretation:** Identified **Glucose** (1.027 impact) and **BMI** (0.67 impact) as the top statistical drivers for prediction.
