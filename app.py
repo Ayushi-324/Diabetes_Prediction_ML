@@ -47,15 +47,22 @@ st.write(input_df)
 # 6. Make the Prediction
 if st.button("Calculate Risk Score"):
     prediction = model.predict(input_df)
-    probability = model.predict_proba(input_df)[:, 1]
+    probability = model.predict_proba(input_df)[:, 1][0] # Get the first score
 
     st.subheader("Results")
-    if prediction[0] == 1:
-        st.error(f"High Risk: Diabetic Pattern Detected")
-    else:
-        st.success(f"Low Risk: Healthy Pattern Detected")
-        
-    st.write(f"**Confidence Score:** {probability[0]:.2%}")
     
-    # Simple Progress Bar for Visuals
-    st.progress(float(probability[0]))
+    # 🌈 Colorful Result Boxes
+    if prediction[0] == 1:
+        st.error(f"🚨 High Risk: Diabetic Pattern Detected")
+        st.info("💡 Tip: Please consult a healthcare professional for a formal diagnosis.")
+    else:
+        st.success(f"✅ Low Risk: Healthy Pattern Detected")
+        st.info("💡 Tip: Keep up the healthy habits like exercise and a balanced diet!")
+        
+    # 📊 Confidence Score & Progress Bar
+    st.write(f"**Confidence Score:** {probability:.2%}")
+    st.progress(float(probability))
+
+# 7. The Important "Safety Label" (Disclaimer)
+st.markdown("---")
+st.caption("⚠️ **Disclaimer:** This app is for educational purposes only. It uses the Pima Indians Diabetes dataset and is NOT a substitute for professional medical advice, diagnosis, or treatment.")
