@@ -21,6 +21,10 @@ This project uses the **Pima Indians Diabetes Database** to build a predictive m
 5. **Deployment:** Serialized the final pipeline using `joblib` and deployed as an interactive **Streamlit** web app.
 
 ## 🧬 Feature Impact (Model Logic)
+<p align="center">
+  <img src="feature_impact.png" alt="Feature Impact Analysis" width="700">
+</p>
+
 Based on the Z-score differences between classes, the model prioritizes:
 1. **Glucose:** 1.027
 2. **BMI:** 0.670
