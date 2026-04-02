@@ -1,5 +1,9 @@
 # 🩺 Pima Indians Diabetes Predictor
 
+<p align="center">
+  <img src="app_preview.png" alt="Streamlit App Interface" width="800">
+</p>
+
 A high-accuracy machine learning web application that predicts diabetes risk based on diagnostic measurements. This project was developed using a reverse-engineering approach to master model tuning and deployment pipelines.
 
 ## 🚀 Live Demo
