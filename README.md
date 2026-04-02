@@ -15,7 +15,7 @@ This project uses the **Pima Indians Diabetes Database** to build a predictive m
 
 ## 🛠️ Technical Workflow
 <p align="center">
-  <img src="pipeline_architecture.png" alt="Model Pipeline" width="600">
+  <img src="pipeline_architecture.png" alt="Model Pipeline" width="400">
 </p>
 
 1. **Data Cleaning:** Handled missing values (zeros in Glucose, BMI, etc.) using `SimpleImputer` with a median strategy.
